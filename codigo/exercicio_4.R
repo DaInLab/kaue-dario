@@ -7,21 +7,21 @@ library(readxl)
 # Importando o arquivo do exercício 4
 exercicio4 <- read_excel("./dados/exercicio4.xls")
 
-sort (exercicio4)
-range(exercicio4)
-AT <- ceiling((max(exercicio4)- min(exercicio4)))
+sort (exercicio4$Salários)
+range(exercicio4$Salários)
+AT <- ceiling((max(exercicio4$Salários)- min(exercicio4$Salários)))
 AT
 
-k <- nclass.Sturges(exercicio4)
-length(exercicio4)
+k <- nclass.Sturges(exercicio4$Salários)
+length(exercicio4$Salários)
 
-k <- ceiling((sqrt(length(exercicio4))))
+k <- ceiling((sqrt(length(exercicio4$Salários))))
 k
 
 h <- ceiling(AT/k)
 h
 
-infclass <- min(exercicio4)
+infclass <- min(exercicio4$Salários)
 supclass <- infclass+(k*h)
 
 brk <-seq(infclass,supclass,h)

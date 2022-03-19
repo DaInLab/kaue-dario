@@ -1,7 +1,7 @@
 # Importando o arquivo do exercÃ­cio 3
 if(!("xlsx") %in% installed.packages()) install.packages("xlsx", type = "source") 
 library(xlsx)
-exercicio3 = read.xlsx("./dados/exercicio3.xlsx",encoding =  "UTF-8", sheetName = "Sheet1")
+exercicio3 = read.xlsx("./dados/exercicio3.xls",encoding =  "UTF-8", sheetName = "Sheet1")
 head(exercicio3)
 
 # calculando a mediana
@@ -21,3 +21,4 @@ print(paste("Moda do numero de filhos:", ex3.moda))
 #grafico
 
 plot(exercicio3$Numero.de.filhos, exercicio3$Familias)
+
